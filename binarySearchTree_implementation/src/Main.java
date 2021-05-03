@@ -18,8 +18,11 @@ public class Main {
         tree.insert(16);
         tree.insert(63);
         tree.insert(67);
-    
+        
         System.out.println("the size of bst is:" + tree.size());
+
+        tree.checkExist(63);
+
        
     }
 }

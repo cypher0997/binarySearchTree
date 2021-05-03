@@ -60,4 +60,24 @@ class BST {
     
 
     }
+
+    public void checkExist(int recieve) {
+        int key = recieve;
+ 
+        if (ifNodeExists(root, key))
+            System.out.println("YES its present in bst");
+        else
+            System.out.println("NO its not here ,go check elsewhere");
+    }
+
+    static boolean ifNodeExists( Node node, int data) {
+        if (node == null)
+            return false;
+        if (node.key == data)
+            return true;
+        boolean res1 = ifNodeExists(node.left, data);
+        if(res1) return true;
+        boolean res2 = ifNodeExists(node.right, data);
+        return res2;
+    }
 }
